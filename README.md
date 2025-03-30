@@ -141,6 +141,9 @@ python batch_analyzer.py
 
 # Specify output directory
 python batch_analyzer.py --output-dir "my_analysis"
+
+# Enable advanced time tracking with session-based analysis
+python batch_analyzer.py --all --analyze-folders
 ```
 
 **Features:**
@@ -151,12 +154,25 @@ python batch_analyzer.py --output-dir "my_analysis"
   - Complexity scoring of prompts
   - Time spent analysis based on prompt timestamps
   - Response length analysis (when available)
+- Comprehensive time tracking using two methods:
+  - Prompt-based estimation calculates time from prompt length and complexity
+  - Session-based analysis identifies work sessions from file modification times
+  - Comparison between both methods for validation
+- Detailed time breakdowns:
+  - Time spent per workspace
+  - Average time per prompt
+  - Writing vs. thinking vs. reading time
+  - Work session timelines
+  - Total days equivalent
 - Comprehensive report generation in markdown format
 - Visualizations including:
   - Prompts per workspace
   - Prompt categories distribution
   - Complexity score histogram
   - Activity timeline over days/weeks
+  - Time spent per workspace chart
+  - Time breakdown pie chart
+  - Session timeline visualization
 
 **Requirements:**
 ```
